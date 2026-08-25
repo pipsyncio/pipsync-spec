@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "pipsync.signal.v1",
+  "id": "10000000-0000-4000-8000-000000000002",
+  "instrument": "XAUUSD",
+  "direction": "SELL",
+  "entryPrice": "2450.25",
+  "stopLoss": null,
+  "takeProfits": [],
+  "channelName": "synthetic-metals-demo",
+  "providerName": null,
+  "status": null,
+  "receivedAt": "2026-01-15T10:31:00+00:00"
+}

@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.pipsync.io/v1/webhook-envelope.schema.json",
+  "title": "PipSync webhook envelope",
+  "description": "A transport-neutral community envelope for mocks and conformance tools. Authentication headers and signing algorithms are deliberately outside this payload schema.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "eventId",
+    "eventType",
+    "idempotencyKey",
+    "occurredAt",
+    "data"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "pipsync.webhook-envelope.v1"
+    },
+    "eventId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "eventType": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 120,
+      "pattern": "^[a-z][a-z0-9_-]*(\\.[a-z][a-z0-9_-]*)+$"
+    },
+    "idempotencyKey": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 200,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+    },
+    "occurredAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "data": {
+      "type": "object"
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "source": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "attempt": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "mode": {
+          "type": "string",
+          "enum": ["live", "replay", "dry_run"]
+        },
+        "replayOf": {
+          "type": "string",
+          "format": "uuid"
+        }
+      }
+    }
+  }
+}

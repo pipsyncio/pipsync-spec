@@ -1,0 +1,7 @@
+extends:
+  - minimal
+
+rules:
+  # The upstream public snapshot has no operationId values. Keep the sanitized
+  # contract source-faithful instead of inventing code-generation identifiers.
+  operation-operationId: off

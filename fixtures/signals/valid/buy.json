@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "pipsync.signal.v1",
+  "id": "10000000-0000-4000-8000-000000000001",
+  "instrument": "EURUSD",
+  "direction": "BUY",
+  "entryPrice": "1.0850",
+  "stopLoss": "1.0820",
+  "takeProfits": ["1.0900", "1.0950"],
+  "channelName": "synthetic-forex-demo",
+  "providerName": "fixture-generator",
+  "status": "received",
+  "receivedAt": "2026-01-15T10:30:00.1234567890Z"
+}

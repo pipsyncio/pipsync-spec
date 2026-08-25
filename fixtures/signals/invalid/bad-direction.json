@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "pipsync.signal.v1",
+  "id": "10000000-0000-4000-8000-000000000003",
+  "instrument": "EURUSD",
+  "direction": "LONG",
+  "entryPrice": "1.0850",
+  "takeProfits": [],
+  "channelName": "synthetic-invalid-demo",
+  "receivedAt": "2026-01-15T10:32:00Z"
+}

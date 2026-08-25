@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.pipsync.io/v1/signal.schema.json",
+  "title": "PipSync signal interchange object",
+  "description": "A versioned community interchange shape for synthetic fixtures, SDKs, mocks, and connector conformance. It does not declare a live ingestion endpoint.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "instrument",
+    "direction",
+    "entryPrice",
+    "takeProfits",
+    "channelName",
+    "receivedAt"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "pipsync.signal.v1"
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "instrument": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 32,
+      "pattern": "^[A-Z0-9][A-Z0-9._/-]*$"
+    },
+    "direction": {
+      "type": "string",
+      "enum": ["BUY", "SELL"]
+    },
+    "entryPrice": {
+      "$ref": "#/$defs/decimal"
+    },
+    "stopLoss": {
+      "oneOf": [
+        { "$ref": "#/$defs/decimal" },
+        { "type": "null" }
+      ]
+    },
+    "takeProfits": {
+      "type": "array",
+      "maxItems": 20,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/decimal"
+      }
+    },
+    "channelName": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120
+    },
+    "providerName": {
+      "type": ["string", "null"],
+      "minLength": 1,
+      "maxLength": 120
+    },
+    "status": {
+      "type": ["string", "null"],
+      "minLength": 1,
+      "maxLength": 64
+    },
+    "receivedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "$defs": {
+    "decimal": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)(\\.[0-9]+)?$"
+    }
+  }
+}

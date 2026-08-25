@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "pipsync.webhook-envelope.v1",
+  "eventId": "20000000-0000-4000-8000-000000000001",
+  "eventType": "signal.received",
+  "idempotencyKey": "fixture:signal:0001",
+  "occurredAt": "2026-01-15T10:30:00Z",
+  "data": {
+    "signalId": "10000000-0000-4000-8000-000000000001",
+    "instrument": "EURUSD"
+  },
+  "metadata": {
+    "source": "synthetic-fixture",
+    "attempt": 1,
+    "mode": "dry_run"
+  }
+}

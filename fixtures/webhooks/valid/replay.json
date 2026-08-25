@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "pipsync.webhook-envelope.v1",
+  "eventId": "20000000-0000-4000-8000-000000000002",
+  "eventType": "report.ready",
+  "idempotencyKey": "fixture:report:0002:attempt:2",
+  "occurredAt": "2026-01-15T10:35:00+00:00",
+  "data": {
+    "reportId": "synthetic-report-0002"
+  },
+  "metadata": {
+    "source": "synthetic-fixture",
+    "attempt": 2,
+    "mode": "replay",
+    "replayOf": "20000000-0000-4000-8000-000000000001"
+  }
+}

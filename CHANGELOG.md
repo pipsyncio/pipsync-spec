@@ -4,6 +4,10 @@ All notable contract changes are documented here. The format follows [Keep a Cha
 
 ## [Unreleased]
 
+### Added
+
+- Added a tracked handoff from the local contract to the hosted API reference.
+
 ## [1.0.0] - 2026-08-25
 
 ### Added

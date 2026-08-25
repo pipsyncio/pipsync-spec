@@ -67,6 +67,12 @@ Contract releases follow [Semantic Versioning and the deprecation policy](VERSIO
 
 The shared [`pipsyncio/.github`](https://github.com/pipsyncio/.github) contribution and security policies apply. Never contribute real signals, customer/account identifiers, authorization headers, webhook secrets, production logs, private URLs, or broker credentials. Report vulnerabilities privately through GitHub Security Advisories.
 
+## Continue with PipSync
+
+Use this repository when you need a pinned, reviewable contract. For hosted API
+authentication, scopes, rate limits, and integration guidance, continue with the
+[PipSync API reference](https://pipsync.io/en/api-docs?utm_source=github&utm_medium=repository&utm_campaign=developer-tools&utm_content=pipsync-spec).
+
 ## License
 
 Repository content and tooling: Apache-2.0, see [`LICENSE`](LICENSE). The hosted
